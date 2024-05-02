@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Build and Push Docker Image'){
             environment{
-                DOCKER_IMAGE = aheel/ultimate-cicd:${BUILD_NUMER}
+                DOCKER_IMAGE = "aheel/ultimate-cicd:${BUILD_NUMER}"
                 // DOCKERFILE_LOCATION = "jenkins-argocd/spring-boot-app/Dockerfile"
                 REGISTRY_CREDENTIALS = credentials('docker-cred')
             }
